@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Adjust space distribution */
+  align-items: center;
+  padding: .5rem .1rem; 
+  background-color: transparent;
+  border: .14rem solid #000000; 
+  border-radius: 20px; 
+  margin-bottom: 2rem; 
+}
+
+.navbar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+  padding: 0 0.25rem; /* Adjust padding to control spacing */
+  color: black;
+}
+
+.navbar a:hover {
+  color: #2f7df4; /* Optional: set color on hover */
+}
+
+.navbar a.active {
+  color: #2f7df4; /* Optional: set color for the active link */
+  background-color: transparent; /* Optional: background color for the active link */
+}

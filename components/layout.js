@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Navbar from './navbar';
 
 const name = 'Mark Brooks';
 export const siteTitle = 'Marks Blog';
@@ -10,6 +11,7 @@ export const siteTitle = 'Marks Blog';
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
+    <Navbar />
       <Head>
         <link rel="icon" href="/images/profile.jpg" />
         <meta
