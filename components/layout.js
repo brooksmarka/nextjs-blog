@@ -8,9 +8,9 @@ import Navbar from './navbar';
 const name = 'Mark Brooks';
 export const siteTitle = 'Marks Blog';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, isProjectPage }) {
   return (
-    <div className={styles.container}>
+    <div className={isProjectPage ? styles.projectContainer : styles.container}>
     <Navbar />
       <Head>
         <link rel="icon" href="/images/profile.jpg" />

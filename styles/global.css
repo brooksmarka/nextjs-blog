@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -36,3 +40,45 @@ img {
   display: block;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gridItem {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Change to single column */
+  }
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactLinkContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.contactLink {
+  display: flex;
+  color: black;
+  padding: .5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contactLink:hover {
+  background-color: black;
+  color: white;
+}

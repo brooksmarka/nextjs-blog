@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function FramerWrapper({children,delay = 0.25 ,y = 15, x = 0,duration = 0.20,scale = 0, className}) {
+function FramerWrapper({children,delay = 0.1 ,y = 20, x = 0,duration = .8, scale = 0, className}) {
     const [animateConfig, setAnimateConfig] = useState({
         opacity:1, y:0, x:0
     })

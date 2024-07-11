@@ -1,15 +1,40 @@
 .container {
-    max-width: 36rem;
-    padding: 0 1rem;
-    margin: 3rem auto 6rem;
+  max-width: 36rem;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+}
+
+.projectContainer {
+  max-width: 100%; 
+  padding: 0 2rem; 
+  margin: 3rem auto 6rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1rem; 
+}
+
+.gridItem {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; 
   }
-  
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .backToHome {
-    margin: 3rem 0 0;
-  }
+}

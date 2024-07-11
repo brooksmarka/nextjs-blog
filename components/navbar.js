@@ -5,7 +5,9 @@ import {
   Phone,
   User2,
   Drill,
-  NotebookPen
+  NotebookPen,
+  Github, 
+  Linkedin
 } from "lucide-react";
 import { buttonVariants } from "./ui/button";
 import {
@@ -31,29 +33,31 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <FramerWrapper className={styles.navbar}>
-      {items.map((item) => (
-        <TooltipProvider key={item.name}>
-          <Tooltip>
-            <TooltipTrigger asChild>
-            <Link
-                href={item.link}
-                className={cn(
-                  buttonVariants({ variant: "ghost", size: "sm" }),
-                  pathname === item.link ? styles.active : "",
-                  "hover:text-[#2f7df4]"
-                )}
-              >
-                {item.icon}
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>{item.name}</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      ))}
-    </FramerWrapper>
+    <div className={styles.navbarContainer}>
+      <FramerWrapper className={styles.navbar}>
+        {items.map((item) => (
+          <TooltipProvider key={item.name}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+              <Link
+                  href={item.link}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "sm" }),
+                    pathname === item.link ? styles.active : "",
+                    "hover:text-[#2f7df4]"
+                  )}
+                >
+                  {item.icon}
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{item.name}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ))}
+      </FramerWrapper>
+    </div>
   );
 };
 
