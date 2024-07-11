@@ -13,7 +13,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const ProjectCards = ({ value, num }) => {
   return (
-    <FramerWrapper className={"max-w-[32%] min-h-[345px] max-lg:max-w-full"} y={0} scale={0.8} delay={num / 4} duration={0.15}>
+    <FramerWrapper className={"w-[520px] h-[300px] max-lg:w-full max-lg:h-auto"} y={0} scale={0.8} delay={num / 4} duration={0.15}>
       <Card className="w-full h-full">
         <CardHeader>
           <CardTitle>{value.title}</CardTitle>

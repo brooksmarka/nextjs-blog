@@ -2,8 +2,7 @@ import Layout from '../../components/layout';
 import FramerWrapper from '../../components/FramerWrapper';
 import Heading from "../../components/Heading";
 import ProjectCards from '../../components/ProjectsCard';
-import { Badge } from '../../components/ui/badge';
-import { Layers } from "lucide-react";
+
 
 export default function Projects() {
 
@@ -31,23 +30,26 @@ export default function Projects() {
     }
   ];
   return (
+    <>
     <Layout isProjectPage>
-      <h1 className="contactTitle">Projects</h1>
+   
       <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
         <div className="flex flex-col gap-3">
+        <Heading>Projects</Heading>
           <FramerWrapper y={0} x={200}>
-            <p className="font-poppins text-lg w-full text-primary max-sm:text-base">
+            <p className="font-poppins text-xl w-full text-primary max-sm:text-base">
              Take a look at my previous projects. Feel free to explore these projects and reach out via the contact page if you have questions!
             </p>
           </FramerWrapper>
         </div>
 
-        <div className="w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
+        <div className="w-full flex flex-row flex-wrap gap-3 justify-center max-lg:flex-col">
           {projects.map((val, indx) => {
             return <ProjectCards key={indx} value={val} num={indx} />;
           })}
         </div>
       </div>
     </Layout>
+    </>
   );
 }
