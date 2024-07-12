@@ -18,7 +18,7 @@ export default function Projects() {
       title: "Trail Creator",
       description:
         "See the gps coordinates of your trail after searching for it",
-      tags: ["Typescript", "Express.js", "Node.js"],
+      tags: ["Typescript", "Express.js", "Node.js", "Vite"],
       link: "https://github.com/brooksmarka/trail-creator",
     },
     {

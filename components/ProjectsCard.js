@@ -22,7 +22,17 @@ const ProjectCards = ({ value, num }) => {
           <p className="text-base font-poppins">{value.description}</p>
           <div className="w-full h-fit flex mt-2 justify-center flex-row gap-3">
             {value.tags.map((item, index) => (
-              <span className={`inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium ${item === 'Node.js' && 'bg-grey-100 text-grey-800' || item === 'Express.js' && 'bg-green-100 text-green-800' || item === 'Vite' && 'bg-purple-100 text-purple-800' || item === 'Javascript' && 'bg-teal-100 text-teal-800' || item === 'AWS Amplify' && 'bg-yellow-100 text-yellow-800 ' || item === 'Mapbox' && 'bg-blue-100 text-blue-800' || item === 'Typescript' && 'bg-red-100 text-red-800' || 'bg-gray-100 text-gray-800'}`} key={index}>{item}</span>
+              <span className={`inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium ${
+                  item === 'Node.js' && 'bg-slate-100 text-slate-800' || 
+                  item === 'Express.js' && 'bg-green-100 text-green-800' || 
+                  item === 'Vite' && 'bg-violet-100 text-violet-800' || 
+                  item === 'Javascript' && 'bg-teal-100 text-teal-800' || 
+                  item === 'AWS Amplify' && 'bg-yellow-100 text-yellow-800 ' || 
+                  item === 'Mapbox' && 'bg-cyan-100 text-cyan-800' ||
+                  item === 'TelegramBot' && 'bg-orange-100 text-orange-800' ||
+                  item === 'Typescript' && 'bg-red-100 text-red-800' || 'bg-gray-100 text-gray-800'
+                }`} key={index}>{item}
+              </span>
             ))}
           </div>
         </CardContent>

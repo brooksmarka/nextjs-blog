@@ -16,8 +16,7 @@ import {
 } from "../components/ui/tooltip";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import FramerWrapper from "./FramerWrapper";
-import styles from "./navbar.module.css";
+import styles from "../styles/navbar.module.css";
 
 const Navbar = () => {
   const items = [
