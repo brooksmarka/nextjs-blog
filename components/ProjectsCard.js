@@ -30,6 +30,7 @@ const ProjectCards = ({ value, num }) => {
                   item === 'AWS Amplify' && 'bg-yellow-100 text-yellow-800 ' || 
                   item === 'Mapbox' && 'bg-cyan-100 text-cyan-800' ||
                   item === 'TelegramBot' && 'bg-orange-100 text-orange-800' ||
+                  item === 'Docker' && 'bg-rose-100 text-rose-800' ||
                   item === 'Typescript' && 'bg-red-100 text-red-800' || 'bg-gray-100 text-gray-800'
                 }`} key={index}>{item}
               </span>
