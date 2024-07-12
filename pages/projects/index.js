@@ -25,8 +25,15 @@ export default function Projects() {
       title: "Ski Scraper",
       description:
         "A collaborative project which alerted users to Ikon pass reservations",
-      tags: ["Javascript", "TelegramBot", "Redis", "Express.js"],
+      tags: ["TelegramBot", "Redis", "Express.js"],
       link: "https://github.com/jbrennan414/ski-scraper",
+    },
+    {
+      title: "Coffee Run",
+      description:
+        "A simple command-line application to manage coffee orders within a team, track expenses, and determine who should pay next for the coffee run",
+      tags: ["Typescript","Express.js","Vite", "Docker"],
+      link: "https://github.com/brooksmarka/coffee-run",
     }
   ];
   return (
