@@ -1,6 +1,8 @@
 import Layout from "../../components/layout";
 import { Linkedin, Mail, Github } from "lucide-react";
 import Link from "next/link";
+import Heading from "../../components/Heading";
+import FramerWrapper from "../../components/FramerWrapper";
 
 export default function Contact() {
   const items = [
@@ -12,7 +14,12 @@ export default function Contact() {
   return (
     <Layout contact>
       <div className="contactContainer">
-        <h1 className="contactTitle">Contact</h1>
+        <Heading>Contact</Heading>
+        <FramerWrapper y={0} x={200}>
+            <p className="font-poppins text-xl w-full text-primary max-sm:text-base pb-2">
+             If you have questions or just want to chat feel free to reach out to me via the below channels!
+            </p>
+          </FramerWrapper>
         <div className="contactLinkContainer">
           {items.map((item) => (
             <Link

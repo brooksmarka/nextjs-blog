@@ -4,6 +4,8 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import Heading from '../components/Heading';
+import FramerWrapper from '../components/FramerWrapper';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -20,11 +22,14 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>Hi, I'm Mark, a Software Engineer out of Colorado.</p>
-      </section>
+
+      <FramerWrapper y={0} x={200}>
+            <p className="font-poppins text-xl w-full text-primary max-sm:text-base center text-center pb-5">
+              Hi, I'm Mark, a Software Engineer out of Colorado.
+            </p>
+      </FramerWrapper>
       <section className={`${utilStyles.headingBlog} ${utilStyles.padding1px}`}>
-        <h2>Blog</h2>
+        <Heading>Blog</Heading>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>

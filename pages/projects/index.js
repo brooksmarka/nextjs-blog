@@ -12,7 +12,7 @@ export default function Projects() {
       description:
         "A place to share trail status with your friends",
       tags: ["Typescript", "AWS Amplify", "Mapbox", "Vite"],
-      link: "https://www.mudorhero.org",
+      link: "https://github.com/brooksmarka/g2g",
     },
     {
       title: "Trail Creator",
@@ -35,7 +35,7 @@ export default function Projects() {
    
       <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
         <div className="flex flex-col gap-3">
-        <Heading>Projects</Heading>
+          <Heading>Projects</Heading>
           <FramerWrapper y={0} x={200}>
             <p className="font-poppins text-xl w-full text-primary max-sm:text-base">
              Take a look at my previous projects. Feel free to explore these projects and reach out via the contact page if you have questions!
