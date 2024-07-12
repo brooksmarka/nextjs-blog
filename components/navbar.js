@@ -6,8 +6,6 @@ import {
   User2,
   Drill,
   NotebookPen,
-  Github, 
-  Linkedin
 } from "lucide-react";
 import { buttonVariants } from "./ui/button";
 import {
@@ -34,7 +32,7 @@ const Navbar = () => {
 
   return (
     <div className={styles.navbarContainer}>
-      <FramerWrapper className={styles.navbar}>
+      <div className={styles.navbar}>
         {items.map((item) => (
           <TooltipProvider key={item.name}>
             <Tooltip>
@@ -56,7 +54,7 @@ const Navbar = () => {
             </Tooltip>
           </TooltipProvider>
         ))}
-      </FramerWrapper>
+      </div>
     </div>
   );
 };
