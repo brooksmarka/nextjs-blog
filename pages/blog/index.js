@@ -19,14 +19,14 @@ export async function getStaticProps() {
 export default function Blog({allPostsData}) {
     return (
         <Layout contact>
-          <section className={`${utilStyles.headingBlog} ${utilStyles.padding1px}`}>
-              <Heading>Blog</Heading>
-              <FramerWrapper y={0} x={200}>
-                <p className="font-poppins text-xl w-full text-primary max-sm:text-base pb-2">
-                I write about my projects and other stuff here
-                </p>
-              </FramerWrapper>
-              <ul className={utilStyles.list}>
+          <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
+            <Heading>Blog</Heading>
+            <FramerWrapper y={0} x={200}>
+              <p className="font-poppins text-xl w-full text-primary max-sm:text-base pb-2">
+              I write about my projects and other stuff here
+              </p>
+            </FramerWrapper>
+            <ul className={utilStyles.list}>
               {allPostsData.map(({ id, date, title }) => (
                   <li className={utilStyles.listItem} key={id}>
                       <Link href={`/posts/${id}`}>{title}</Link>
@@ -36,8 +36,8 @@ export default function Blog({allPostsData}) {
                       </small>
                   </li>
               ))}
-              </ul>
-          </section>
+            </ul>
+          </div>
         </Layout>
       )
   }

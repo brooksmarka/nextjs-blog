@@ -13,13 +13,13 @@ export default function Contact() {
 
   return (
     <Layout contact>
-      <div className="contactContainer">
+      <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
         <Heading>Contact</Heading>
         <FramerWrapper y={0} x={200}>
             <p className="font-poppins text-xl w-full text-primary max-sm:text-base pt-1 pb-6">
-             If you have questions or just want to chat feel free to reach out to me via the below channels!
+            If you have questions or just want to chat feel free to reach out to me via the below channels!
             </p>
-          </FramerWrapper>
+        </FramerWrapper>
         <div className="contactLinkContainer">
           {items.map((item) => (
             <Link

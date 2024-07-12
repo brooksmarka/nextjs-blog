@@ -22,13 +22,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-
-      <FramerWrapper y={0} x={200}>
-            <p className="font-poppins text-xl w-full text-primary max-sm:text-base center text-center pb-5">
-              Hi, I'm Mark, a Software Engineer out of Colorado.
-            </p>
-      </FramerWrapper>
-      <section className={`${utilStyles.headingBlog} ${utilStyles.padding1px}`}>
+      <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
         <Heading>Blog</Heading>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -42,7 +36,7 @@ export default function Home({ allPostsData }) {
           
           ))}
         </ul>
-      </section>
+      </div>
     </Layout>
   );
 }

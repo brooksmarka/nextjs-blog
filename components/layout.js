@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Navbar from './navbar';
 
 const name = 'Mark Brooks';
+const shortBio = 'Hi, I am Mark, A software Engineer out of Colorado';
 export const siteTitle = 'Marks Blog';
 
 export default function Layout({ children, home}) {
@@ -17,12 +18,6 @@ export default function Layout({ children, home}) {
         <meta
           name="description"
           content="The personal blog for Mark Brooks a developer out of Colorado."
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle,
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -39,6 +34,7 @@ export default function Layout({ children, home}) {
               alt=""
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h2 className={utilStyles.headingMd}>{shortBio}</h2>
           </>
         ) : (
           <>
