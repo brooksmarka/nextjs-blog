@@ -79,6 +79,5 @@ img {
 }
 
 .contactLink:hover {
-  background-color: black;
-  color: white;
+  color: #0070f3
 }

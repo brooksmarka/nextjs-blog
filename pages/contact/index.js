@@ -8,7 +8,7 @@ export default function Contact() {
   const items = [
     { name: "Email", icon: <Mail className="contactIcon" />, link: "mailto:markabrooks@gmail.com" },
     { name: "LinkedIn", icon: <Linkedin className="contactIcon" />, link: "https://www.linkedin.com/in/brooksmarka/", target: "_blank", rel: "noopener noreferrer"  },
-    { name: "Email", icon: <Github className="contactIcon" />, link: "https://github.com/brooksmarka", target: "_blank", rel: "noopener noreferrer"  },
+    { name: "Github", icon: <Github className="contactIcon" />, link: "https://github.com/brooksmarka", target: "_blank", rel: "noopener noreferrer"  },
   ];
 
   return (
