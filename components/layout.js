@@ -8,7 +8,7 @@ import Navbar from './navbar';
 const name = 'Mark Brooks';
 const shortBio1 =  'Software Engineer based out of Arvada Colorado.'
 const shortBio2 =  'I enjoy creating applications that bridge the gap between the outdoors and technology.'
-export const siteTitle = 'Marks Blog';
+export const siteTitle = 'Mark Brooks - Software Engineer';
 
 export default function Layout({ children, home}) {
   return (
