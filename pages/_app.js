@@ -1,14 +1,14 @@
-import '../styles/global.css';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-
+import '../styles/global.css'
+import 'highlight.js/styles/tokyo-night-dark.css'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export default function App({ Component, pageProps }) {
-    return ( 
-      <>
-        <Component {...pageProps} />
-        <Analytics />
-        <SpeedInsights />
-      </>
-    )
-  }
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+      <SpeedInsights />
+    </>
+  )
+}
