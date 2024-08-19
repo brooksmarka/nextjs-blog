@@ -113,4 +113,6 @@ ALTER TABLE "transfers" ADD FOREIGN KEY ("to_account_id") REFERENCES "accounts" 
 
 ```
 
-I hope you found this helpful. If you are curious how to set up a postgres database stay tuned for the next blog post which will show how to set up a postgreSQL database within docker.
+### Stay Tuned!
+
+I hope you found this helpful. If you are curious how to set up a postgreSQL database stay tuned for the next blog post which will show how to set up a postgreSQL database within docker.
