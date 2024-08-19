@@ -1,6 +1,6 @@
 ---
 title: 'Dependency Injection with TypeScript and How to Implement it'
-date: '2024-08-13'
+date: '2024-08-19'
 ---
 
 ### Cuz Nobody Wants to Write Bad Code
@@ -28,7 +28,7 @@ export class CustomMap {
 }
 ```
 
-So, we can add some less than ideal code to this **CustomMap** Class.
+So, we can add some less than ideal code to this **CustomMap** Class which will add two separate methods for showing the location of our **User** and our **Company**.
 
 ```ts
 import { User } from './User'
@@ -83,11 +83,13 @@ The most obvious issue with the above code is its repetitiveness. So let’s cle
   }
 ```
 
-In the above code, we have now completely deleted the **addCompanyMarker** and **addUserMarker** methods and replaced them with the **addMarker** method. This is better as we are no longer repeating ourselves; however, this still requires us to import **User** and **Company** into our **CustomMap** class. Imagine if we wanted to add more markers to the **CustomMap** class. We would have to import them all and pass them into the **addMarker** method. This solution is not scalable and needs to be refactored.
+In the above code, we have now completely deleted the **addCompanyMarker** and **addUserMarker** methods and replaced them with the **addMarker** method. While this is better it is not scalable.
 
-Luckily, we can use interfaces for this, and instead of making **CustomMap** depend on the **User** and **Company** classes, we can invert the dependencies and make **CustomMap** much more extendable through dependency injection.
+This refactor still requires us to import **User** and **Company** into our **CustomMap** class. Imagine if we wanted to add more markers to the **CustomMap** class. We would have to import them all and pass them into the **addMarker** method. So how do we make this scalable?
 
-We know we only need the location data from the **User** and **Company** classes. We can implement an interface that any class can be a part of as long as they contain the location data required to function. Above our declaration of **CustomMap**, let’s implement the following interface.
+Luckily, we can use interfaces for this, and instead of making **CustomMap** depend on the **User** and **Company** classes, we can invert the dependencies and make **CustomMap** extendable through dependency injection.
+
+We only require location data from the **User** and **Company** classes. So lets implement an interface that any class can implement, provided it contains the necessary location data. Above our declaration of **CustomMap**, let’s implement the following interface.
 
 ```ts
 export interface Mappable {
@@ -98,7 +100,7 @@ export interface Mappable {
 }
 ```
 
-Then we can use this interface to make sure any class that uses the **addMarker** method has the requirement of **location** contained within it. This doesn't require that the **User** class **ONLY** contains the location data. It can and does contain more values, this interface just requires that it at least has the **location** value within it because that is what it requires to function properly.
+By using this interface, we can ensure that any class invoking the **addMarker** method must include the location property. This doesn’t mean the **User** class is limited to only containing location data; it can and does hold additional values. The interface simply enforces that the location property is present, as it's essential for the method to function correctly.
 
 ```ts
  addMarker(mappable: Mappable): void {
