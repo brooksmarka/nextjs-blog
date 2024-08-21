@@ -1,17 +1,15 @@
 ---
-title: 'Easily Design a Postgres DB schema using dbdiagram.io'
-date: '2024-08-26'
+title: 'Easily Design a Postgres DB schema using dbdiagram.io (Part 1)'
+date: '2024-08-21'
 ---
 
 ### Succeed fast by failing fast
 
-<!-- ![DB Image](/images/dbdiagram.gif) -->
-
 In software development the term "fail fast" has really resonated with me. When presented with a new project identifying a proof of
-concept and quickly iterating is invaluable to ensuring your project meets the expectations and requirements set out
-by product.
+concept is invaluable to ensuring your project meets the expectations and requirements set out by product. Quickly failing and iterating
+on the project can be a game changer.
 
-In the following blog post I want to show you how you can not only create a database schema but generate SQL code to implemnent your schema in the database of your choice as well as generate an entity relationship diagram to show to your stakeholders using dbdiagram.io.
+In the following blog post I want to show you how you can not only create a database schema but generate SQL code to implemnent your schema in the database of your choice as well as generate an entity relationship diagram to show to your stakeholders using dbdiagram.io. This should allow you to provide needed information to your stakeholders so that you can quickly refine your proof of concepts.
 
 ### Create a new Diagram in dbdiagram.io
 
