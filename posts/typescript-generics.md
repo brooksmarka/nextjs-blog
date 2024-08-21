@@ -1,6 +1,6 @@
 ---
 title: 'Utilizing Generics in Typescript'
-date: '2024-08-20'
+date: '2024-05-20'
 ---
 
 ### Think of Generics as a function argument
@@ -33,67 +33,71 @@ can just create one and then specify the type we want by passing it in as a gene
 So instead we can do this...
 
 ```ts
-class HoldAnything<TypeOfData> {
-	data: TypeOfData
+class HoldAnything<T> {
+  data: T
 }
 
-const holdNumber = new HoldAnything<number>{
-	holdNNumber.data = 123
-}
+const holdNumber = new HoldAnything<number>()
+holdNumber.data = 123
 
-const holdString = new HoldAnything<string>{
-	holdString.data = 'asdfasdf'
-}
+const holdString = new HoldAnything<string>()
+holdString.data = 'asdfasdf'
 ```
 
 You now can implement just one definition of the reusable class and pass in the type.
 
 ## A real world example
 
-As an example of a real world application that would utilize this think of a function which parses a CSV file. The function would take in the csv file and parse it so it can be used in your application.
-We would want to make this csv converter function reusable for any csv file but csv files aren't type aware and almost never have the same types in order! So we can create the function with a generic type and then just like above
+As an example of a real world application that would utilize this think of a function which parses a csv file. The function would take in the csv file and parse it so it can be used in your application.
+We would want to make this csv converter function reusable for any csv file but csv files aren't type aware and almost never have the same types in order! So we can create the function with a generic type (which is **T**) and then just like above
 pass in the type when we instantiate the function.
 
 ```ts
+class csvConverter<T> {
+  data: T[] = []
 
-class csvConverter<TypeOfData>{
-	data: TypeOfData = []
+  constructor(public filename: string) {}
 
-	constructor(public filename: string) {}
-
-	read(): void {
-		//csv read logic
-	}
+  read(): void {
+    //csv read logic
+  }
 }
 
-type RecipeCsvType= {
-	beerName: string
-	hops: string[]
-	description: string
-	grain: string[]
-	directions: string
+type RecipeCsvType = {
+  beerName: string
+  hops: string[]
+  description: string
+  grain: string[]
+  directions: string
 }
 
-const beerRecipes = new csvConverter<RecipeCsvType>{
-	beerRecipes.data = [
-		//parsed beer recipe data
-	]
+const beerRecipes = new csvConverter<RecipeCsvType>('recipes.csv')
+
+beerRecipes.data = [
+  {
+    beerName: 'IPA',
+    hops: ['chinook', 'simcoe'],
+    description: 'a great tasting beer',
+    grain: ['2 row', 'flaked wheat'],
+    directions: 'beer brewing instructions..',
+  },
+]
+
+type HeismanCsvType = {
+  firstName: string
+  lastName: string
+  yearWon: Date
+  school: string
+  gamesWon: number
 }
 
-type HeismanCsvType= {
-	firstName: string
-	lastName: string
-	yearWon: Date
-	school: string
-	gamesWon: number
-}
+const heismanTrophyWinners = new csvConverter<HeismanCsvType>(
+  'heismanwinners.csv'
+)
 
-const heismanTrophyWinners = new csvConverter<HeismanCsvType>{
-	heismanTrophyWinners.data = [
-		//parsed heisman trophy data
-	]
-}
-
+heismanTrophyWinners.data = [
+  //heisman trophy data
+]
 ```
 
 This way we can have two completely different csv lists and keep our type checking working for all of the data coming into our application.
