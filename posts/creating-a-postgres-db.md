@@ -30,7 +30,7 @@ Table accounts as A {
 
 Table entries {
   id bigserial [pk]
-  account_id bigint [ref: >A.id]
+  account_id bigint [ref: >A.id, not null]
   amount bigint [not null, note: 'can be negative or positive']
   created_at timestamptz [not null, default: `now()`]
 
@@ -41,10 +41,10 @@ Table entries {
 
 Table transfers {
  id bigserial [pk]
- from_account_id bigint [ref: > A.id]
- to_account_id bigint [ref: > A.id]
+ from_account_id bigint [ref: > A.id, not null]
+ to_account_id bigint [ref: > A.id, not null]
  amount bigint [not null, note: 'must be positive']
- created_at timestamptz [default: `now()`]
+ created_at timestamptz [not null, default: `now()`]
 
   Indexes {
     from_account_id
@@ -63,7 +63,7 @@ You can see the one to many relationships we set up above! Now you can share thi
 
 ### Export to PostgreSQL
 
-At the top of the page you can click export and select your desired database. I chose **Export to PostgreSQL**. It will download a .sql file for you so you can initialize your database!
+At the top of the page you can click export and select your desired database. I chose **Export to PostgreSQL**. It will download a .sql file for you so you can initialize your database! Remember where this is so we can use it in Part 2!
 
 ```sql
 CREATE TABLE "accounts" (
@@ -76,17 +76,17 @@ CREATE TABLE "accounts" (
 
 CREATE TABLE "entries" (
   "id" bigserial PRIMARY KEY,
-  "account_id" bigint,
+  "account_id" bigint NOT NULL,
   "amount" bigint NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE TABLE "transfers" (
   "id" bigserial PRIMARY KEY,
-  "from_account_id" bigint,
-  "to_account_id" bigint,
+  "from_account_id" bigint NOT NULL,
+  "to_account_id" bigint NOT NULL,
   "amount" bigint NOT NULL,
-  "created_at" timestamptz DEFAULT (now())
+  "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE INDEX ON "accounts" ("owner");
@@ -111,6 +111,6 @@ ALTER TABLE "transfers" ADD FOREIGN KEY ("to_account_id") REFERENCES "accounts" 
 
 ```
 
-### Stay Tuned!
+### On to part 2!
 
-I hope you found this helpful. If you are curious how to set up a postgreSQL database stay tuned for the next blog post which will show how to set up a postgreSQL database within docker.
+I hope you found this helpful. If you are curious how to set up a postgreSQL database check out part 2 which will show how to set up a postgreSQL database within docker.
