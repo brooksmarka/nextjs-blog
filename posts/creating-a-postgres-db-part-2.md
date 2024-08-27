@@ -1,14 +1,20 @@
 ---
 title: 'Easily Design a Postgres DB schema using dbdiagram.io (Part 2)'
-date: '2024-08-22'
+date: '2024-08-27'
 topics: 'Typescript'
 ---
 
+### Populating PostgresDB with our schema
+
 Lets use Docker to download a postgres image from docker hub and then start and run the container locally.
 
-You can do this by navigating to [docker hub](https://www.hub.docker.com) and searching for `postgres`. Select the first postgres image you see which should be the official docker image. You can download any postgres image you would like. I'm going to use 16-alpine. Enter the below command to download it.
+You can do this by navigating to [docker hub](https://www.hub.docker.com) and searching for `postgres`. Select the first postgres image you see which should be the official docker image.
 
-> Make sure you have installed docker desktop.
+![Postgres](/images/postgres.png)
+
+You can download any postgres image you would like. I'm going to use 16-alpine. Enter the below command to download it.
+
+- **Note**: Make sure you have installed docker desktop.
 
 ```bash
 	docker pull postgres:16-alpine
@@ -16,14 +22,16 @@ You can do this by navigating to [docker hub](https://www.hub.docker.com) and se
 
 Once the download finishes you can run the postgres container with the following command.
 
-> Give the postgres database a unique password instead of yoursecretpassword :)
+- **Note**: Give the postgres database a unique password instead of yoursecretpassword :)
 
 ```bash
-	docker run --name postgres16 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=yoursecretpassword -d postgres:12-alpine
+	docker run --name postgres16 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=yoursecretpassword -d postgres:16-alpine
 
 ```
 
 You can then run `docker ps` to see your running container. You can also run `docker images` to see the available images.
+
+### Connect to the database and run commands within it
 
 The postgres server is now ready. We can connect to it and access its console by the following command.
 
@@ -45,9 +53,11 @@ You can also see logs of the container. Type `/q` to exit out of the postgres db
 docker logs postgres16
 ```
 
-You can now the the logs within your database.
+You can now see the the logs within your database.
 
-We can also see a gui representation of the database with tableplus.com. Navigate to tableplus.com and download it.
+### See a GUI representation of the database with tableplus
+
+We can also see a GUI representation of the database with tableplus.com. Navigate to [tablesplus.com](https://www.tableplus.com) and download it.
 
 Once it is downloaded you can right click to create a new connection. You will want to select postgres as the database type. It should look like this.
 
@@ -66,3 +76,7 @@ You can highlight any of the tables and select the "Structure" tab to view info 
 ![DB Structure](/images/structure.png)
 
 Thats it! Your database is now initialized.
+
+In this blog post we learned how to pull down a database image from docker hub, initialize it, read logs and populate it using a free GUI tool called tableplus.
+
+I hope this was helpful and and thanks for reading.
