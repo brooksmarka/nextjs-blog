@@ -6,7 +6,7 @@ topics: 'Typescript'
 
 ### Continuing on...
 
-Alright so in part 1 we created our schema and even exported the schema into a .sql file. Pretty cool. Now lets get that schema to actually create our tables in postgreSQL.
+Alright so in [part 1](/posts/creating-a-postgres-db) we created our schema and even exported the schema into a .sql file. Pretty cool. Now lets get that schema to actually create our tables in postgreSQL.
 
 ### Populating PostgreSQL with our schema
 
@@ -84,5 +84,7 @@ You can highlight any of the tables and select the "Structure" tab to view info 
 Thats it! Your database is now initialized.
 
 In this blog post we learned how to pull down a database image from docker hub, initialize it, read logs and populate it using a free GUI tool called tableplus.
+
+In the next post in this series I'll show how to connect to our database within our repository and eventually use **sqlc** to generate CRUD Go code! Heads will explode! Well at least mine...
 
 I hope this was helpful and thanks for reading.

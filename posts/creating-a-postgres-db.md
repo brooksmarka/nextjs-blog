@@ -58,7 +58,7 @@ Table transfers {
 Click the "AutoArrange" icon on the bottom toolbar of the rendered diagram. The icon looks like this:  
 ![autoarrange](/images/autoarrange.png)
 
-You can see the one to many relationships we set up above! Now you can share this easily with your team! (Note: I switched the accounts and entries by dragging them around to better see the relationship)
+You can see the one to many relationships we set up above. Now you can share this easily with your team! (Note: I switched the accounts and entries by dragging them around to better see the relationship)
 ![DB Diagram](/images/diagram.png)
 
 ### Export to PostgreSQL
@@ -113,4 +113,4 @@ ALTER TABLE "transfers" ADD FOREIGN KEY ("to_account_id") REFERENCES "accounts" 
 
 ### On to part 2!
 
-I hope you found this helpful. If you are curious how to set up a postgreSQL database check out part 2 which will show how to set up a postgreSQL database within docker.
+I hope you found this helpful. If you are curious how to set up a postgreSQL database check out [part 2](/posts/creating-a-postgres-db-part-2) which will show how to set up a postgreSQL database within docker.
