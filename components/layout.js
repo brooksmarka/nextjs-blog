@@ -8,7 +8,7 @@ import Navbar from './navbar'
 const name = 'Mark Brooks'
 const shortBio1 = 'Software Engineer based out of Arvada Colorado.'
 const shortBio2 =
-  'I am interested in the outdoors, web3, aws, and solving problems'
+  'I am interested in the outdoors, web3, aws, and solving problems.'
 export const siteTitle = 'Mark Brooks - Software Engineer'
 
 export default function Layout({ children, home }) {
