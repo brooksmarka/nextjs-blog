@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Navbar />
       <Head>
-        <link rel="icon" href="/images/profile.jpg" />
+        <link rel="icon" href="/images/profile.png" />
         <meta
           name="description"
           content="The personal blog for Mark Brooks a developer out of Colorado."
@@ -29,7 +29,7 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src="/images/profile.png"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
@@ -44,7 +44,7 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <Image
                 priority
-                src="/images/profile.jpg"
+                src="/images/profile.png"
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
