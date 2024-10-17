@@ -10,16 +10,20 @@ export default function About() {
           <Heading>About</Heading>
           <FramerWrapper y={0} x={200}>
             <p className="font-poppins text-lg w-full text-primary max-sm:text-base py-1">
-              I started my professional software development career in 2018
-              after a 9 year career in software sales. Since then I have worked
-              as a full stack software engineer. This has really allowed me to
-              work in a lot of different areas and languages. I have expertise
-              in Typescript, React Native and React as well as experience
-              working with Java, Golang, PHP and AWS.
+              I'm Mark, a software engineer with a passion for creating digital
+              solutions that make a real difference in people’s lives. With
+              expertise across full-stack development and a background in
+              software sales, I’ve spent my career refining the user experience
+              of high-traffic applications and solving technical challenges.
             </p>
             <p className="font-poppins text-lg w-full text-primary max-sm:text-base py-1">
-              I really enjoy working on projects which show data in an
-              interesting and new way to users.{' '}
+              Whether it’s architecting resilient systems, reducing technical
+              debt, or designing intuitive user interfaces, I enjoy turning
+              complex problems into simple, user-centered solutions.
+            </p>
+            <p className="font-poppins text-lg w-full text-primary max-sm:text-base py-1">
+              When I’m not coding, I’m likely outside, mountain biking, skiing,
+              gardening or hiking with my wife and dog.
             </p>
             <p className="font-poppins text-lg w-full text-primary max-sm:text-base py-1">
               Feel free to visit my projects tab to learn more about what I have
@@ -28,7 +32,7 @@ export default function About() {
               Not only to share the knowledge but as a way of solidifying it in
               my brain as well.
             </p>
-            <p className="font-poppins text-lg w-full text-primary max-sm:text-base pt-1">
+            <p className="font-poppins text-lg w-full text-primary max-sm:text-base py-1">
               If you have questions please feel free to reach out to me via my
               contact page!
             </p>
