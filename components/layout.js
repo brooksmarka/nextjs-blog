@@ -6,9 +6,7 @@ import Link from 'next/link'
 import Navbar from './navbar'
 
 const name = 'Mark Brooks'
-const shortBio1 = 'Software Engineer based out of Arvada Colorado.'
-const shortBio2 =
-  'I am interested in the outdoors, web3, aws, and solving problems.'
+const shortBio1 = 'Software Engineer'
 export const siteTitle = 'Mark Brooks - Software Engineer'
 
 export default function Layout({ children, home }) {
@@ -37,7 +35,7 @@ export default function Layout({ children, home }) {
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
             <h2 className={utilStyles.headingMd}>{shortBio1}</h2>
-            <h2 className={utilStyles.headingMd}>{shortBio2}</h2>
+            <h3>Arvada, CO</h3>
           </>
         ) : (
           <>
