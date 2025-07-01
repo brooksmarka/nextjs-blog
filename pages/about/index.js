@@ -17,13 +17,16 @@ export default function About() {
               of high-traffic applications and solving technical challenges.
             </p>
             <p className="font-poppins text-lg w-full text-primary max-sm:text-base py-1">
-              Whether it’s architecting resilient systems, reducing technical
-              debt, or designing intuitive user interfaces, I enjoy turning
-              complex problems into simple, user-centered solutions.
+              My most recent experience is in the healthcare field of cancer
+              treatment. I helped streamline the initial entry into front end
+              react app by removing over 7 redundant data fetches using a new
+              context provider for fetching data. I also helped implement a new
+              feedback tool which allowed testers and users to submit bug
+              reports and feedback to the appropriate team.
             </p>
             <p className="font-poppins text-lg w-full text-primary max-sm:text-base py-1">
               When I’m not coding, I’m likely outside, mountain biking, skiing,
-              gardening or hiking with my wife and dog.
+              gardening or hanging out with my wife, daughter and dog.
             </p>
             <p className="font-poppins text-lg w-full text-primary max-sm:text-base py-1">
               Feel free to visit my projects tab to learn more about what I have
