@@ -64,7 +64,7 @@ export default function Layout({ children, home }) {
         </div>
       )}
       <div className={styles.footer}>
-        &copy; 2025 Mark Brooks. All rights reserved.
+        &copy; 2026 Mark Brooks. All rights reserved.
       </div>
     </div>
   )
